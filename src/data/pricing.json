@@ -1,0 +1,85 @@
+[
+  {
+    "id": "logo-simple",
+    "label": "Simple logo or text",
+    "price": 12,
+    "currency": "USD",
+    "unit": "per design",
+    "turnaround": "48 h",
+    "note": "One revision round included",
+    "from": false
+  },
+  {
+    "id": "logo-standard",
+    "label": "Standard logo",
+    "price": 18,
+    "currency": "USD",
+    "unit": "per design",
+    "turnaround": "48 h",
+    "note": "One revision round included",
+    "from": false
+  },
+  {
+    "id": "ornate",
+    "label": "Ornate and ecclesiastical design",
+    "price": 60,
+    "currency": "EUR",
+    "unit": "per design",
+    "turnaround": "3 to 5 days",
+    "note": "Vestments, heraldic and other detailed work",
+    "from": true
+  },
+  {
+    "id": "matched-set",
+    "label": "Matched set (3 to 5 pieces)",
+    "price": null,
+    "currency": null,
+    "unit": "sum of the pieces",
+    "priceLabel": "Sum of pieces, 10 to 15% off",
+    "turnaround": "By scope",
+    "note": "Priced from the pieces in the set",
+    "from": false
+  },
+  {
+    "id": "rush",
+    "label": "Rush",
+    "price": 25,
+    "currency": null,
+    "unit": "percent added to the design price",
+    "priceLabel": "+25%",
+    "turnaround": "24 h",
+    "note": "Added to the design price",
+    "from": false
+  },
+  {
+    "id": "monthly-plan",
+    "label": "Monthly plan",
+    "price": 300,
+    "currency": "USD",
+    "unit": "per month for 30 logos",
+    "turnaround": "48 h",
+    "note": "For shops with steady logo work",
+    "from": false
+  },
+  {
+    "id": "extra-revision",
+    "label": "Extra revision",
+    "price": 30,
+    "currency": null,
+    "unit": "percent of the design price",
+    "priceLabel": "30% of design price",
+    "turnaround": "n/a",
+    "note": "After the included round",
+    "from": false
+  },
+  {
+    "id": "free-trial",
+    "label": "Free trial design",
+    "price": 0,
+    "currency": "USD",
+    "unit": "per qualified request",
+    "turnaround": "48 h",
+    "note": "For qualified requests",
+    "from": false
+  }
+]

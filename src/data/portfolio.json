@@ -1,0 +1,98 @@
+[
+  {
+    "id": "vestment-01",
+    "category": "ornate",
+    "title": "PLACEHOLDER",
+    "before": "/work/vestment-01-before.webp",
+    "after": "/work/vestment-01-after.webp",
+    "alt": "PLACEHOLDER",
+    "caption": "PLACEHOLDER",
+    "width": 1200,
+    "height": 900,
+    "approved": false
+  },
+  {
+    "id": "vestment-02",
+    "category": "ornate",
+    "title": "PLACEHOLDER",
+    "before": "/work/vestment-02-before.webp",
+    "after": "/work/vestment-02-after.webp",
+    "alt": "PLACEHOLDER",
+    "caption": "PLACEHOLDER",
+    "width": 1200,
+    "height": 900,
+    "approved": false
+  },
+  {
+    "id": "vestment-03",
+    "category": "ornate",
+    "title": "PLACEHOLDER",
+    "before": "/work/vestment-03-before.webp",
+    "after": "/work/vestment-03-after.webp",
+    "alt": "PLACEHOLDER",
+    "caption": "PLACEHOLDER",
+    "width": 1200,
+    "height": 900,
+    "approved": false
+  },
+  {
+    "id": "heraldic-01",
+    "category": "ornate",
+    "title": "PLACEHOLDER",
+    "before": "/work/heraldic-01-before.webp",
+    "after": "/work/heraldic-01-after.webp",
+    "alt": "PLACEHOLDER",
+    "caption": "PLACEHOLDER",
+    "width": 1200,
+    "height": 900,
+    "approved": false
+  },
+  {
+    "id": "ceremonial-01",
+    "category": "ornate",
+    "title": "PLACEHOLDER",
+    "before": "/work/ceremonial-01-before.webp",
+    "after": "/work/ceremonial-01-after.webp",
+    "alt": "PLACEHOLDER",
+    "caption": "PLACEHOLDER",
+    "width": 1200,
+    "height": 900,
+    "approved": false
+  },
+  {
+    "id": "logo-01",
+    "category": "logo",
+    "title": "PLACEHOLDER",
+    "before": "/work/logo-01-before.webp",
+    "after": "/work/logo-01-after.webp",
+    "alt": "PLACEHOLDER",
+    "caption": "PLACEHOLDER",
+    "width": 1200,
+    "height": 900,
+    "approved": false
+  },
+  {
+    "id": "logo-02",
+    "category": "logo",
+    "title": "PLACEHOLDER",
+    "before": "/work/logo-02-before.webp",
+    "after": "/work/logo-02-after.webp",
+    "alt": "PLACEHOLDER",
+    "caption": "PLACEHOLDER",
+    "width": 1200,
+    "height": 900,
+    "approved": false
+  },
+  {
+    "id": "logo-03",
+    "category": "logo",
+    "title": "PLACEHOLDER",
+    "before": "/work/logo-03-before.webp",
+    "after": "/work/logo-03-after.webp",
+    "alt": "PLACEHOLDER",
+    "caption": "PLACEHOLDER",
+    "width": 1200,
+    "height": 900,
+    "approved": false
+  }
+]
