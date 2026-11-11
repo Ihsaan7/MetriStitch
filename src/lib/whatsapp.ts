@@ -1,5 +1,6 @@
 import { copy } from '../content/copy.en';
-import { isPlaceholder, siteConfig } from '../config/site.config';
+import { siteConfig } from '../config/site.config';
+import { isPlaceholder } from './placeholder';
 
 /** wa.me link with a short pre-filled message. The number comes from site.config. */
 export function whatsappUrl(): string {

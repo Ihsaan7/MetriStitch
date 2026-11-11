@@ -1,4 +1,5 @@
 import { copy } from '@/content/copy.en';
+import { isProduction } from '@/lib/env';
 import { piecesForWork } from '@/lib/portfolio';
 import WorkGallery, { type GalleryPiece } from './WorkGallery';
 
@@ -32,7 +33,8 @@ export default function Work() {
         </h2>
         <p className="mt-5 measure text-muted">{copy.work.intro}</p>
         <div className="mt-10">
-          <WorkGallery pieces={items} labels={copy.work} />
+          {/* The marked-frame label is a preview aid: it must not reach production markup. */}
+          <WorkGallery pieces={items} labels={{ ...copy.work, placeholderFrame: isProduction ? '' : copy.work.placeholderFrame }} />
         </div>
       </div>
     </section>

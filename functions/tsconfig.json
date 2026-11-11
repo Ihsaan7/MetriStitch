@@ -10,6 +10,5 @@
     "skipLibCheck": true,
     "resolveJsonModule": true
   },
-  "include": ["./**/*.ts", "../src/config/*.ts", "../src/content/*.ts", "../src/lib/**/*.ts"],
-  "exclude": ["../src/lib/content.ts", "../src/lib/env.ts"]
+  "include": ["./**/*.ts"]
 }

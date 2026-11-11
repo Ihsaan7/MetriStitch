@@ -69,7 +69,3 @@ export const siteConfig: SiteConfig = {
 };
 
 export const siteUrl = `https://${siteConfig.domain}`;
-
-export function isPlaceholder(value: string): boolean {
-  return value.includes('PLACEHOLDER');
-}

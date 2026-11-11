@@ -6,7 +6,9 @@ import Hero from '@/components/Hero';
 import HowItWorks from '@/components/HowItWorks';
 import Pricing from '@/components/Pricing';
 import Work from '@/components/Work';
+import JsonLd from '@/components/JsonLd';
 import { copy } from '@/content/copy.en';
+import { homeLd } from '@/lib/jsonld';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata = pageMetadata({
@@ -20,6 +22,7 @@ export const metadata = pageMetadata({
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={homeLd()} />
       <Hero />
       <FactsStrip />
       <Work />
