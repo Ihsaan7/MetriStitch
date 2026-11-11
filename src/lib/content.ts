@@ -55,6 +55,14 @@ function isValidDate(value: string): boolean {
   return ISO_DATE.test(value) && !Number.isNaN(Date.parse(`${value}T00:00:00Z`));
 }
 
+/** Throws a readable error when a page's front matter is incomplete. This is what fails the build. */
+export function assertValidFrontMatter(data: Record<string, string>, file: string): void {
+  if (!data.title?.trim()) throw new Error(`${file}: front matter needs a title`);
+  if (!data.description?.trim()) throw new Error(`${file}: front matter needs a description`);
+  if (!data.date || !isValidDate(data.date)) throw new Error(`${file}: front matter needs a date like 2026-11-11`);
+  if (data.updated && !isValidDate(data.updated)) throw new Error(`${file}: "updated" must look like 2026-11-11`);
+}
+
 function loadPage(section: Section, fileName: string): ContentPage {
   const file = `content/${section}/${fileName}`;
   const slug = fileName.replace(/\.md$/, '');
@@ -62,11 +70,7 @@ function loadPage(section: Section, fileName: string): ContentPage {
 
   const raw = fs.readFileSync(path.join(CONTENT_ROOT, section, fileName), 'utf8');
   const { data, body } = parseFrontMatter(raw, file);
-
-  if (!data.title?.trim()) throw new Error(`${file}: front matter needs a title`);
-  if (!data.description?.trim()) throw new Error(`${file}: front matter needs a description`);
-  if (!data.date || !isValidDate(data.date)) throw new Error(`${file}: front matter needs a date like 2026-11-11`);
-  if (data.updated && !isValidDate(data.updated)) throw new Error(`${file}: "updated" must look like 2026-11-11`);
+  assertValidFrontMatter(data, file);
 
   return {
     section,

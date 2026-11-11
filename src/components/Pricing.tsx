@@ -55,11 +55,11 @@ export default function Pricing() {
         <ul className="mt-8 border-t border-ink md:hidden" aria-label={copy.pricing.tableLabel}>
           {rows.map((row) => (
             <li key={row.id} className={`border-b border-line py-5 ${row.highlight ? 'bg-white px-3' : ''}`}>
-              <div className="flex items-baseline justify-between gap-4">
-                <p className="font-medium leading-snug">{row.label}</p>
-                <p className="shrink-0 text-right font-display text-[1.375rem] leading-none">{row.price}</p>
-              </div>
-              <p className="mt-1 text-right text-[0.875rem] text-muted">{row.unit}</p>
+              <p className="font-medium leading-snug">{row.label}</p>
+              <p className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <span className="font-display text-[1.5rem] leading-none">{row.price}</span>
+                <span className="text-[0.875rem] text-muted">{row.unit}</span>
+              </p>
               <p className="mt-2 text-[0.9375rem] text-muted">
                 {copy.pricing.turnaroundLabel}: {row.turnaround}. {row.note}.
               </p>
