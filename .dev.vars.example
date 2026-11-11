@@ -1,0 +1,11 @@
+# Copy to .dev.vars for `npm run preview` (local Pages Function). Never commit .dev.vars.
+# On Cloudflare Pages, add the same names under Settings > Variables and Secrets.
+
+# Resend API key (secret). https://resend.com/api-keys
+RESEND_API_KEY=
+# Verified sender, for example: Studio Name <studio@your-domain>. The domain must be verified in Resend.
+MAIL_FROM=
+# Optional. Where order notifications go. Defaults to the email in src/config/site.config.ts.
+NOTIFY_EMAIL=
+# Turnstile secret key (secret). Pair it with NEXT_PUBLIC_TURNSTILE_SITE_KEY.
+TURNSTILE_SECRET_KEY=
