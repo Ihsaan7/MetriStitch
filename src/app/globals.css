@@ -1,0 +1,315 @@
+@import 'tailwindcss';
+
+/*
+  Design tokens. One accent colour (thread gold).
+  Contrast on Paper (#F7F4EE):
+    Ink #15171A        about 16:1   body text
+    Muted #55575C      about 6.6:1  secondary text
+    Gold ink #7A5C1E   about 5.7:1  small gold text
+    Gold #B08A3E       about 2.9:1  decoration and button fill only, never text.
+                       Ink text on a Gold fill is about 5.6:1.
+*/
+@theme {
+  --color-ink: #15171a;
+  --color-paper: #f7f4ee;
+  --color-gold: #b08a3e;
+  --color-gold-ink: #7a5c1e;
+  --color-line: #d9d3c7;
+  --color-muted: #55575c;
+
+  --font-display: 'Newsreader Variable', 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter Variable', 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  @media (min-width: 768px) {
+    body {
+      font-size: 1.125rem;
+    }
+  }
+
+  body:has(dialog[open]) {
+    overflow: hidden;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    line-height: 1.08;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-ink);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Page frame: content up to 1120px. */
+  .wrap {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 1120px;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .wrap {
+      padding-inline: 2rem;
+    }
+  }
+
+  .section {
+    padding-block: 4.5rem;
+  }
+  @media (min-width: 768px) {
+    .section {
+      padding-block: 7rem;
+    }
+  }
+
+  /* Signature detail: a thin dashed stitch line. */
+  .stitch {
+    height: 0;
+    border: 0;
+    border-top: 1.5px dashed var(--color-gold);
+  }
+
+  .eyebrow {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-gold-ink);
+  }
+
+  .h-section {
+    font-size: 2.125rem;
+  }
+  @media (min-width: 768px) {
+    .h-section {
+      font-size: 3rem;
+    }
+  }
+
+  .measure {
+    max-width: 62ch;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 3rem;
+    padding: 0.625rem 1.5rem;
+    border: 1.5px solid var(--color-ink);
+    border-radius: 2px;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+  .btn-primary {
+    background: var(--color-gold);
+    border-color: var(--color-gold);
+    color: var(--color-ink);
+  }
+  .btn-primary:hover {
+    background: #c29d52;
+    border-color: #c29d52;
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--color-ink);
+  }
+  .btn-ghost:hover {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+  .btn-sm {
+    min-height: 2.75rem;
+    padding: 0.5rem 0.875rem;
+    font-size: 0.875rem;
+  }
+  .btn[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .link {
+    color: var(--color-ink);
+    text-decoration: underline;
+    text-decoration-color: var(--color-gold);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+  .link:hover {
+    text-decoration-color: var(--color-ink);
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 0.75rem;
+    top: -4rem;
+    z-index: 100;
+    padding: 0.75rem 1rem;
+    background: var(--color-ink);
+    color: var(--color-paper);
+    font-weight: 600;
+  }
+  .skip-link:focus {
+    top: 0.75rem;
+  }
+
+  /* Form controls. */
+  .field {
+    display: block;
+    width: 100%;
+    min-height: 3rem;
+    padding: 0.625rem 0.875rem;
+    background: #fff;
+    border: 1px solid #8f897c;
+    border-radius: 2px;
+    color: var(--color-ink);
+    font: inherit;
+    font-size: 1rem;
+  }
+  .field:focus {
+    border-color: var(--color-ink);
+    outline: 2px solid var(--color-ink);
+    outline-offset: 1px;
+  }
+  .field[aria-invalid='true'] {
+    border-color: #9b1c1c;
+  }
+  .field-error {
+    margin-top: 0.375rem;
+    font-size: 0.9375rem;
+    color: #9b1c1c;
+  }
+
+  /* Placeholder frame, preview builds only. Clearly marked, never shipped to production. */
+  .ph-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border: 1.5px dashed var(--color-gold-ink);
+    background: #fff;
+    color: var(--color-gold-ink);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  /* Markdown pages (/digitizing and /guides). */
+  .prose-ms {
+    max-width: 62ch;
+  }
+  .prose-ms > * + * {
+    margin-top: 1.25rem;
+  }
+  .prose-ms h2 {
+    margin-top: 2.5rem;
+    font-size: 1.875rem;
+  }
+  .prose-ms h3 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+  .prose-ms ul,
+  .prose-ms ol {
+    padding-left: 1.25rem;
+  }
+  .prose-ms ul {
+    list-style: disc;
+  }
+  .prose-ms ol {
+    list-style: decimal;
+  }
+  .prose-ms li + li {
+    margin-top: 0.375rem;
+  }
+  .prose-ms a {
+    text-decoration: underline;
+    text-decoration-color: var(--color-gold);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+  .prose-ms strong {
+    font-weight: 600;
+  }
+  .prose-ms table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+  }
+  .prose-ms th,
+  .prose-ms td {
+    padding: 0.625rem 0.75rem;
+    border-bottom: 1px solid var(--color-line);
+    text-align: left;
+  }
+}
+
+@layer components {
+  /* FAQ accordion on native <details>: no JavaScript. */
+  details > summary {
+    list-style: none;
+    cursor: pointer;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  details[open] .faq-sign {
+    transform: rotate(45deg);
+  }
+  .faq-sign {
+    transition: transform 0.15s ease;
+  }
+}
