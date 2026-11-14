@@ -119,7 +119,7 @@ const raw = {
     photoPlaceholder: 'PLACEHOLDER: workspace photo',
   },
 
-  faq: {
+   faq: {
     title: 'Questions',
     items: [
       {
@@ -140,7 +140,7 @@ const raw = {
       },
       {
         q: 'How does payment work?',
-        a: 'We send a quote first. You approve it and pay, then we deliver the files and a preview. Accepted payment methods: PLACEHOLDER.',
+        a: 'We send a quote first. You approve it and pay, then we deliver the files and a preview. We accept PayPal. If PayPal does not work for you, we can arrange a bank transfer.',
       },
       {
         q: 'Who owns the file?',
@@ -148,7 +148,7 @@ const raw = {
       },
       {
         q: 'What does the free trial include?',
-        a: 'One design, delivered in {{turnaround:free-trial}}, for qualified requests. Which requests qualify: PLACEHOLDER.',
+        a: 'One simple logo, delivered in {{turnaround:free-trial}}, for businesses that plan to place orders. We decide which requests qualify.',
       },
     ],
   },
