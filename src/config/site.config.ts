@@ -9,13 +9,13 @@
 
 export interface SiteConfig {
   /** The one place the brand name is written. */
-  brandName: string;
+  brandName: "MetriStitch";
   /** Production domain without protocol. To be confirmed; connect it later in Cloudflare Pages. */
-  domain: string;
+  domain: "metristitch.com";
   /** Business email: shown on the site and used for order notifications. */
-  email: string;
+  email: "metristitch@gmail.com";
   /** WhatsApp number in international format, digits only (for example 923001234567). */
-  whatsappNumber: string;
+  whatsappNumber: 923490896977;
   /** Social profile links. Leave empty until real profiles exist. */
   social: { label: string; url: string }[];
   /** Facts the copy may state. Everything else is a placeholder. */
@@ -49,8 +49,8 @@ export interface SiteConfig {
 export const siteConfig: SiteConfig = {
   brandName: 'MetriStitch',
   domain: 'metristitch.com', // To be confirmed.
-  email: 'PLACEHOLDER', // Business email address.
-  whatsappNumber: 'PLACEHOLDER', // Digits only, with country code.
+  email: 'metristitch@gmail.com', // Business email address.
+  whatsappNumber: 923490896977, // Digits only, with country code.
   social: [],
   facts: {
     years: '10+',
