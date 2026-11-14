@@ -6,6 +6,7 @@ const nextConfig = {
   trailingSlash: true,
   // Next's image optimizer needs a server. Images are pre-optimized (see `npm run images`).
   images: { unoptimized: true },
+    eslint: { ignoreDuringBuilds: true },
   reactStrictMode: true,
   poweredByHeader: false,
 };

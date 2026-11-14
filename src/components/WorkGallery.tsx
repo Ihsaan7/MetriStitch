@@ -106,6 +106,8 @@ export default function WorkGallery({ pieces, labels }: { pieces: GalleryPiece[]
         </ul>
       )}
 
+{/*Backdrop click is a mouse convenience only. Keyboard users close with Esc or the Close button. */}
+      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/click-events-have-key-events */}
       <dialog
         ref={dialogRef}
         aria-labelledby="work-dialog-title"
