@@ -49,7 +49,7 @@ export interface SiteConfig {
 export const siteConfig: SiteConfig = {
   brandName: 'MetriStitch',
   domain: 'metristitch.com', // To be confirmed.
-  email: 'metristitch@gmail.com', // Business email address.
+  email: 'studio@metristitch.com', // Business email address.
   whatsappNumber: '923490896977', // Digits only, with country code.
   social: [],
   facts: {
